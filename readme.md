@@ -4,12 +4,20 @@
 OraLatencyMap
 
 
+see http://dtrace.org/blogs/brendan/2009/03/17/heat-map-analytics/ for some information on heat maps.
+
+see http://externaltable.blogspot.com/2013/05/latency-heat-map-in-sqlplus-with.html for original.
+
+To run an auto refresh color coded heatmap on "log file sync" in sqlplus simple do
+
     sqlplus / as sysdba
     SQL> @OraLatencyMap_event 3 "log file sync"
 
 
+where OraLatencyMap_event.sql is in your current directory or sqlpath
 
 
+Now to play with LGWR latency with cgroup throttles see
 
 
 https://fritshoogland.wordpress.com/2012/12/15/throttling-io-with-linux/
